@@ -2,6 +2,7 @@ package arraypractice;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class ArrayPractice {
 
@@ -36,7 +37,17 @@ public class ArrayPractice {
 		
 		for(Book b : bookList) {
 			System.out.println(b);
-		}		
+		}
+		
+		Iterator<Book> itr = bookList.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.toString());
+			itr.next();
+		}
+		String str = "Let's make a cool string.";
+		String[] a = str.split(" ");
+		System.out.println(a.length);
+		
 	}
-
+	
 }
